@@ -18,6 +18,9 @@ from services.coaching.voice_pipeline import VoicePipeline, autoplay_audio
 from dotenv import load_dotenv
 load_dotenv()
 
+
+os.environ["MEDIAPIPE_DISABLE_GPU"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 def main():
     st.set_page_config(
         page_icon="🏋️‍♀️",
